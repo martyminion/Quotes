@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { QuoteEntry } from '../quote-entry';
 
 @Component({
   selector: 'app-quote-details',
@@ -6,6 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
+  @Input() 
+  quote:QuoteEntry;
+  @Output() 
+  voteCountDown = new EventEmitter<QuoteEntry>()
+  @Output() 
+  voteCountUp = new EventEmitter<QuoteEntry>()
+  
+  voteUp(){
+    let up
+    this.voteCountUp.emit(up)
+  }
+  voteDown(){
+    let down;
+    this.voteCountDown.emit(down)
+  }
 
   constructor() { }
 

@@ -1,1 +1,8 @@
-<p>quote-details works!</p>
+
+<div>
+  <p>{{quote.author}}</p>
+  <p>this quote was added by {{quote.contributor}}</p>
+  <button (click) = 'voteUp()' >{{quote.upvotes}}</button>
+  <button (click) = 'voteDown()'>{{quote.downvotes}}</button>
+</div>
+
