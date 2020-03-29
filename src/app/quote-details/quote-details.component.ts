@@ -11,6 +11,7 @@ export class QuoteDetailsComponent implements OnInit {
   quote:QuoteEntry;
   @Output() 
   voteCountDown = new EventEmitter<QuoteEntry>()
+  
   @Output() 
   voteCountUp = new EventEmitter<QuoteEntry>()
   
@@ -18,6 +19,7 @@ export class QuoteDetailsComponent implements OnInit {
     let up
     this.voteCountUp.emit(up)
   }
+  
   voteDown(){
     let down;
     this.voteCountDown.emit(down)
