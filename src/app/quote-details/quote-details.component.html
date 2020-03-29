@@ -2,7 +2,7 @@
 <div>
   <p>{{quote.author}}</p>
   <p>this quote was added by {{quote.contributor}}</p>
-  <button (click) = 'voteUp()' >{{quote.upvotes}}</button>
-  <button (click) = 'voteDown()'>{{quote.downvotes}}</button>
+  <button (click) = 'voteUp()' ><img src="/assets/images/thumbsup.jpg" width="20" height="20">{{quote.upvotes}}</button>
+  <button (click) = 'voteDown()'><img src="/assets/images/thumbsdown.jpg" width="30" height="25">{{quote.downvotes}}</button>
 </div>
 
