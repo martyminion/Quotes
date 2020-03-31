@@ -7,7 +7,7 @@ import { QuoteEntry} from '../quote-entry'
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  
+
   quotes: QuoteEntry[]=[
     new QuoteEntry(1,"Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist. Be curious.",
       "Stephen Hawking","Martin"),
@@ -37,6 +37,24 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].downvotes = this.quotes[index].downvotes +1
 
   }
+  // check(){
+  //   let quoteUpvotes = []
+  //   for (let j = 0; j < this.quotes.length; j++) {
+  //     quoteUpvotes.push(this.quotes[j].upvotes)
+  //   }
+
+  //   alert(quoteUpvotes)
+
+  //   quoteUpvotes.sort(function (a, b) { return b - a })
+
+  //   alert(quoteUpvotes)
+
+  //   for (let j = 0; j < this.quotes.length; j++) {
+  //     if (quoteUpvotes[0] === this.quotes[j].upvotes) {
+  //       return 'yellow'
+  //     }
+  //   }
+  // }
   constructor() { }
 
   ngOnInit(): void {
