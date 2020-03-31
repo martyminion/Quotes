@@ -1,6 +1,6 @@
 import { Directive, ElementRef, Input } from '@angular/core';
 import { QuoteEntry } from './quote-entry'
-//import { QuoteComponent } from './quote/quote.component'
+
 @Directive({
   selector: '[appHighlight]'
 })

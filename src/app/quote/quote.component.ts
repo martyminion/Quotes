@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { QuoteEntry} from '../quote-entry'
+import { HighlightDirective} from '../highlight.directive'
 
 @Component({
   selector: 'app-quote',
@@ -7,6 +8,8 @@ import { QuoteEntry} from '../quote-entry'
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+  @Input() 
+  check:HighlightDirective;
 
   quotes: QuoteEntry[]=[
     new QuoteEntry(1,"Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist. Be curious.",
@@ -15,11 +18,11 @@ export class QuoteComponent implements OnInit {
       "Hellen Keller","Martin")
   ]
   
+
   addNewQuote(quote){
    let quoteId = this.quotes.length
    quote.id = quoteId + 1
    this.quotes.push(quote)
-
 
   }
 
