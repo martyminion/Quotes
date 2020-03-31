@@ -3,8 +3,8 @@
   <div class="row">
     <div class="col-md-6">
     <div *ngFor='let quote of quotes;let i = index'>
-      <div>
-        <blockquote (click)='toggleDetails(i)'>{{quote.content}}</blockquote>
+      <div (click)='toggleDetails(i)'>
+        <blockquote appHighlight>{{quote.content}}</blockquote>
       </div>
       <div>
         <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (voteCountDown)=counterDown(i) (voteCountUp)=counterUp(i)></app-quote-details>
