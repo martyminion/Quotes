@@ -6,7 +6,7 @@ import { QuoteComponent } from './quote/quote.component'
 })
 export class HighlightDirective {
 
-  constructor(private elem: ElementRef) { 
+  constructor(private elem: ElementRef) {
 
     this.elem.nativeElement.style.background = "green"
   }

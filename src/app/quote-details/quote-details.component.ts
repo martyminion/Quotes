@@ -7,21 +7,21 @@ import { QuoteEntry } from '../quote-entry';
   styleUrls: ['./quote-details.component.css']
 })
 export class QuoteDetailsComponent implements OnInit {
-  @Input() 
-  quote:QuoteEntry;
-  
-  @Output() 
+  @Input()
+  quote: QuoteEntry;
+
+  @Output()
   voteCountDown = new EventEmitter()
-  
-  @Output() 
+
+  @Output()
   voteCountUp = new EventEmitter()
-  
-  voteUp(){
+
+  voteUp() {
     let up
     this.voteCountUp.emit(up)
   }
-  
-  voteDown(){
+
+  voteDown() {
     let down;
     this.voteCountDown.emit(down)
   }
