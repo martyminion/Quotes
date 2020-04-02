@@ -2,7 +2,7 @@
 <div>
   <footer class="text-center blockquote-footer"><cite id="quote">{{quote.author}}</cite></footer>
   <footer class="blockquote-footer" id="quotefooter">this quote was added by {{quote.contributor}}</footer>
-  <button (click) = 'voteUp()' id="voteUpButton"><img src="/assets/images/thumbsup.jpg" width="20" height="20" >{{quote.upvotes}}</button>
-  <button (click) = 'voteDown()' id="voteDownButton"><img src="/assets/images/thumbsdown.jpg" width="25" height="20">{{quote.downvotes}}</button>
+  <button (click) = 'voteUp()' id="voteUpButton"><img src="/assets/images/thumbsup.jpg" width="20" height="20" id="voteUpImg" >{{quote.upvotes}} Likes</button>
+  <button (click) = 'voteDown()' id="voteDownButton"><img src="/assets/images/thumbsdown.jpg" width="25" height="20" id="voteDownImg">{{quote.downvotes}} Dislikes</button>
 </div>
 

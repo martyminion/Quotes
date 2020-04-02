@@ -8,3 +8,21 @@
 footer{
   color: antiquewhite;
 }
+
+#voteUpButton{
+  margin-right:20px ;
+
+}
+
+#voteDownButton{
+  margin-left: 20px;
+
+}
+
+#voteUpImg{
+  margin-right: 5px;
+}
+
+#voteDownImg{
+  margin-right: 5px;
+}
