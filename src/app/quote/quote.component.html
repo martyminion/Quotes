@@ -1,26 +1,28 @@
-<div class="container-fluid">
+<div class="container-fluid text-center">
   <h1>Quotes Galore</h1>
-  <div class="row">
-    <div class="col-md-6">
-    <div *ngFor='let quote of quotes;let i = index'>
-      <div (click)='toggleDetails(i)'>
-        <blockquote appHighlight *ngIf = "check() === quote.upvotes && quote.upvotes > 0 ">{{quote.content}}</blockquote>
-        <blockquote  *ngIf = "check() !== quote.upvotes || quote.upvotes === 0 ">{{quote.content}}</blockquote>
-      </div>
-      <div>
-        <p>posted {{quote.currentDate|pipecount}}</p>
-        <!-- <p>posted {{quote.currentDate}}</p>
-        <p>posted {{quote.currentDate}}</p> -->
-      </div>
-      <div>
-        <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (voteCountDown)=counterDown(i) (voteCountUp)=counterUp(i)></app-quote-details>
-      </div>
+  <div *ngFor='let quote of quotes;let i = index'>
+    <div (click)='toggleDetails(i)'>
+      <blockquote appHighlight *ngIf="check() === quote.upvotes && quote.upvotes > 0 " class="blockquote text-center">
+        {{quote.content}}</blockquote>
+      <blockquote *ngIf="check() !== quote.upvotes || quote.upvotes === 0 " class="blockquote text-center">
+        {{quote.content}}</blockquote>
+    </div>
+    <div>
+      <p id="dateCustom">posted {{quote.currentDate|pipecount}}</p>
+    </div>
+    <div>
+      <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (voteCountDown)=counterDown(i)
+        (voteCountUp)=counterUp(i)></app-quote-details>
     </div>
   </div>
-    <div class="col-md-6">
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
       <app-quote-form (addQuote)=addNewQuote($event)></app-quote-form>
     </div>
-  </div>
-  <div>
+    <div class="col-md-4">
+    </div>
+    
   </div>
 </div>

@@ -1,8 +1,8 @@
 
 <div>
-  <p>{{quote.author}}</p>
-  <p>this quote was added by {{quote.contributor}}</p>
-  <button (click) = 'voteUp()' ><img src="/assets/images/thumbsup.jpg" width="20" height="20">{{quote.upvotes}}</button>
-  <button (click) = 'voteDown()'><img src="/assets/images/thumbsdown.jpg" width="30" height="25">{{quote.downvotes}}</button>
+  <footer class="text-center blockquote-footer"><cite id="quote">{{quote.author}}</cite></footer>
+  <footer class="blockquote-footer" id="quotefooter">this quote was added by {{quote.contributor}}</footer>
+  <button (click) = 'voteUp()' id="voteUpButton"><img src="/assets/images/thumbsup.jpg" width="20" height="20" >{{quote.upvotes}}</button>
+  <button (click) = 'voteDown()' id="voteDownButton"><img src="/assets/images/thumbsdown.jpg" width="25" height="20">{{quote.downvotes}}</button>
 </div>
 
