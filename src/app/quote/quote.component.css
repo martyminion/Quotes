@@ -7,7 +7,13 @@ blockquote{
 
 h1{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 60px;
+  color: coral;
 }
 #dateCustom{
   color: antiquewhite;
+}
+h3{
+  text-align: center;
+  color: coral;
 }

@@ -1,3 +1,13 @@
 .quoteForm{
   text-align: center;
 }
+label{
+  color: antiquewhite;
+  font-size: 20px;
+}
+input{
+  background-color: rgba(0,0,0,0);
+}
+textarea{
+  background-color: rgba(0,0,0,0);
+}
