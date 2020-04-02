@@ -4,28 +4,16 @@
     <div class="form-group">
       <label for="contributor">Please Enter your Full Name</label>
       <input type="text" name="contributor" id="contributor" class="form-control" [(ngModel)]="newQuote.contributor" #contributor = 'ngModel' required>
-      
-      <div [hidden]="contributor.valid || contributor.pristine" class="alert alert-danger">
-        <p>Full name is required</p>
-      </div>
     </div>
     <div class="form-group">
       <label for="content">Quote</label>
       <textarea name="content" id="" cols="30" rows="10" class="form-control" [(ngModel)]="newQuote.content" #content='ngModel' required></textarea>
-     
-      <div [hidden]="content.valid || content.pristine" class="alert alert-danger">
-        <p> Please Enter a Quote</p>
-      </div>
     </div>
 
     <div class="form-group">
       <label for="author">Please Enter the Quote Author</label>
       <input type="text" name="Author" id="Author" class="form-control" [(ngModel)]="newQuote.author" #Author='ngModel' required>
-      
-      <div [hidden]="Author.valid || Author.pristine" class="alert alert-danger">
-        <p>Who wrote the quote</p>
-      </div>
     </div>
-    <button class="btn btn-primary" type="submit">Submit</button>
+    <button id="submitButton" class="btn " type="submit">Submit</button>
   </form>
 </div>

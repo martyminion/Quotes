@@ -6,8 +6,19 @@ label{
   font-size: 20px;
 }
 input{
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0.322);
+  outline-color: coral;
+  color: antiquewhite;
+ 
 }
 textarea{
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0.322);
+  outline-color: coral;
+  color: antiquewhite;
+ 
+  
+}
+#submitButton{
+  color: coral;
+  font-size: 25px;
 }
