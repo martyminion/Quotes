@@ -7,11 +7,15 @@ export class PipecountPipe implements PipeTransform {
 
   transform(value: any) {
     let firstDate:Date = new Date(value);
+    let currentDate:Date = new Date();
      //gets the value of the original date
     //let todayWithTime:any = new Date(today.getHours(),today.getMinutes(),today.getSeconds())
+      let timeDifferenceSeconds = Math.round(Math.abs((currentDate.getTime()-firstDate.getTime())/1000));
+      let days = Math.round(Math.abs((timeDifferenceSeconds)/86400))
+      let minutes = Math.round(Math.abs((timeDifferenceSeconds)/60))
+      let hours = Math.round(Math.abs((minutes)/60))
 
-    
-    return firstDate.getTime()
+    return days
 
 
 
