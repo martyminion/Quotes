@@ -11,10 +11,10 @@ export class QuoteDetailsComponent implements OnInit {
   quote:QuoteEntry;
   
   @Output() 
-  voteCountDown = new EventEmitter<QuoteEntry>()
+  voteCountDown = new EventEmitter()
   
   @Output() 
-  voteCountUp = new EventEmitter<QuoteEntry>()
+  voteCountUp = new EventEmitter()
   
   voteUp(){
     let up

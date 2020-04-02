@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { QuoteEntry} from '../quote-entry'
+//import { check } from '../highlight.directive'
 
 @Component({
   selector: 'app-quote',
@@ -12,7 +13,7 @@ export class QuoteComponent implements OnInit {
     new QuoteEntry(1,"Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist. Be curious.",
       "Stephen Hawking","Martin"),
     new QuoteEntry(2,"Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence.",
-      "Hellen Keller","Martin")
+      "Hellen Keller","Martin",)
   ]
   
 
@@ -31,33 +32,30 @@ export class QuoteComponent implements OnInit {
 
   counterUp(index){
     this.quotes[index].upvotes = this.quotes[index].upvotes +1
-
   }
   counterDown(index){
     this.quotes[index].downvotes = this.quotes[index].downvotes +1
 
   }
-  // check(){
-  //   let quoteUpvotes = []
-  //   for (let j = 0; j < this.quotes.length; j++) {
-  //     quoteUpvotes.push(this.quotes[j].upvotes)
-  //   }
 
-  //   alert(quoteUpvotes)
+  check(){
+    let quoteUpvotes = []
+    let highestVotes;
+    for (let j = 0; j < this.quotes.length; j++) {
+      quoteUpvotes.push(this.quotes[j].upvotes)
+    }
+    quoteUpvotes.sort(function (a, b) { return b - a })
+    highestVotes = quoteUpvotes[0]
 
-  //   quoteUpvotes.sort(function (a, b) { return b - a })
+    return highestVotes
 
-  //   alert(quoteUpvotes)
-
-  //   for (let j = 0; j < this.quotes.length; j++) {
-  //     if (quoteUpvotes[0] === this.quotes[j].upvotes) {
-  //       return 'yellow'
-  //     }
-  //   }
-  // }
+   
+  }
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
+
