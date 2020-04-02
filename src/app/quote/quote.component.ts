@@ -40,7 +40,7 @@ export class QuoteComponent implements OnInit {
 
   check(){
     let quoteUpvotes = []
-    let highestVotes;
+    let highestVotes:number
     for (let j = 0; j < this.quotes.length; j++) {
       quoteUpvotes.push(this.quotes[j].upvotes)
     }
