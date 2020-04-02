@@ -8,6 +8,11 @@
         <blockquote  *ngIf = "check() !== quote.upvotes || quote.upvotes === 0 ">{{quote.content}}</blockquote>
       </div>
       <div>
+        <p>posted {{quote.currentDate|pipecount}}</p>
+        <!-- <p>posted {{quote.currentDate}}</p>
+        <p>posted {{quote.currentDate}}</p> -->
+      </div>
+      <div>
         <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (voteCountDown)=counterDown(i) (voteCountUp)=counterUp(i)></app-quote-details>
       </div>
     </div>

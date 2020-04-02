@@ -3,6 +3,7 @@ export class QuoteEntry {
   upvotes: number;
   downvotes: number;
   showDetails: boolean
+  currentDate:Date
 
   constructor(
     public id: number,
@@ -12,5 +13,6 @@ export class QuoteEntry {
     this.showDetails = false;
     this.upvotes = 0;
     this.downvotes = 0;
+    this.currentDate = new Date();
   }
 }
