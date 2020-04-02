@@ -13,9 +13,9 @@ export class QuoteComponent implements OnInit {
     new QuoteEntry(1,"Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist. Be curious.",
       "Stephen Hawking","Martin"),
     new QuoteEntry(2,"Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence.",
-      "Hellen Keller","Martin",)
+      "Hellen Keller","Martin")
   ]
-  
+
 
   addNewQuote(quote){
    let quoteId = this.quotes.length
@@ -54,7 +54,9 @@ export class QuoteComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
+
+    this.quotes[0].currentDate = new Date(2020,1,15)
+    this.quotes[1].currentDate = new Date(2020,2,2)
   }
 
 }
