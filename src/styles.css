@@ -1,7 +1,10 @@
 @import "~bootstrap/dist/css/bootstrap.css" ;
 
 #quoteBackground{
-  background-image: url("./assets/images/usebckn.jpg")
+  background-image: url("./assets/images/anotherbcn.jpg");
+  background-position: center;
+  background-size: contain;
+  
 }
 
 /* You can add global styles to this file, and also import other style files */

@@ -1,8 +1,10 @@
 
 blockquote{
-  font-family: fantasy;
+  font-family: 'Source Code Pro', monospace;
   font-size: 20px;
-  color: antiquewhite;
+  color: rgb(250, 255, 253);
+  font-style: italic;
+  font-weight: 15px;
 }
 
 h1{
@@ -16,4 +18,12 @@ h1{
 h3{
   text-align: center;
   color: coral;
+}
+.QuoteInfo{
+  margin: 50px;
+  border: 15px;
+}
+#tap{
+  color: chocolate;
+  font-size: 15px;
 }
