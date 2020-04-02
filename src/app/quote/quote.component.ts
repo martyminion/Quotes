@@ -13,7 +13,9 @@ export class QuoteComponent implements OnInit {
     new QuoteEntry(1,"Look up at the stars and not down at your feet. Try to make sense of what you see, and wonder about what makes the universe exist. Be curious.",
       "Stephen Hawking","Martin"),
     new QuoteEntry(2,"Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence.",
-      "Hellen Keller","Martin")
+      "Hellen Keller","Martin"),
+    new QuoteEntry(3,"The greatest glory in living lies not in never falling, but in rising every time we fall","Nelson Mandela","James"),
+    new QuoteEntry(4,"Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking.","Steve Jobs","Hailey")
   ]
 
 
@@ -55,8 +57,11 @@ export class QuoteComponent implements OnInit {
   trigger:number = 0;
   ngOnInit(): void {
 
-    this.quotes[0].currentDate = new Date(2020,1,15)
-    this.quotes[1].currentDate = new Date(2020,2,2)
+    this.quotes[0].currentDate = new Date(2020,0,15)
+    this.quotes[1].currentDate = new Date(2020,1,7)
+    this.quotes[2].currentDate = new Date(2020,2,22)
+    this.quotes[3].currentDate = new Date(2020,3,1)
+
 
     setInterval(()=> this.trigger = 5,1000)
   }
