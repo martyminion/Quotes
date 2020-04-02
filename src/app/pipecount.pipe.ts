@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'pipecount'
+  name: 'pipecount',
+  pure: false
 })
 export class PipecountPipe implements PipeTransform {
 
@@ -16,26 +17,21 @@ export class PipecountPipe implements PipeTransform {
       let hours = Math.round(Math.abs((minutes)/60))
       
 
-      if (timeDifferenceSeconds<60 && timeDifferenceSeconds>0){
-        return timeDifferenceSeconds+" seconds ago"
+      if (timeDifferenceSeconds<60){
+        return timeDifferenceSeconds + " seconds ago"
       }
         else if(timeDifferenceSeconds>=60 && minutes>0 && minutes<60){
-          return minutes + " minutes ago"
+          return minutes + " " + " minutes ago"
         }
 
         else if(minutes >= 60 && hours>0 && hours<24){
-          return hours + " hours ago"
+          return hours + " " + " hours ago"
         }
         else if(hours>24 && days>0){
-          return days + "days ago"
+          return days + " "+ " days ago"
         }
 
       
-
-    return days
-
-
-
     // let timeDifference = Math.abs(value - todayWithTime) //returns in milliseconds
     // let timeDifferenceSeconds = timeDifference * 0.001
     // let timeDifferenceminutes = timeDifferenceSeconds/60
