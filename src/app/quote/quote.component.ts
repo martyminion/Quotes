@@ -52,11 +52,13 @@ export class QuoteComponent implements OnInit {
    
   }
   constructor() { }
-
+  trigger:number = 0;
   ngOnInit(): void {
 
     this.quotes[0].currentDate = new Date(2020,1,15)
     this.quotes[1].currentDate = new Date(2020,2,2)
+
+    setInterval(()=> this.trigger = 5,1000)
   }
 
 }

@@ -14,6 +14,23 @@ export class PipecountPipe implements PipeTransform {
       let days = Math.round(Math.abs((timeDifferenceSeconds)/86400))
       let minutes = Math.round(Math.abs((timeDifferenceSeconds)/60))
       let hours = Math.round(Math.abs((minutes)/60))
+      
+
+      if (timeDifferenceSeconds<60 && timeDifferenceSeconds>0){
+        return timeDifferenceSeconds+" seconds ago"
+      }
+        else if(timeDifferenceSeconds>=60 && minutes>0 && minutes<60){
+          return minutes + " minutes ago"
+        }
+
+        else if(minutes >= 60 && hours>0 && hours<24){
+          return hours + " hours ago"
+        }
+        else if(hours>24 && days>0){
+          return days + "days ago"
+        }
+
+      
 
     return days
 
