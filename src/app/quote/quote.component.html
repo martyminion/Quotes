@@ -15,6 +15,9 @@
       <app-quote-details *ngIf='quote.showDetails' [quote]='quote' (voteCountDown)=counterDown(i)
         (voteCountUp)=counterUp(i)></app-quote-details>
     </div>
+    <div>
+      <button (click)="deleteQuote(i)" class="btn deleteButton">Delete Quote</button>
+    </div>
   </div>
   <h3>Fill the form below to enter your favourite Quotes</h3>
   <div class="row">
